@@ -36,6 +36,7 @@
                 </div>
                 <button type="submit" class="btn btn-success">Registrarse</button>
             </form>
+            <p class="lead">Creditos a Biaku para <a href="http://tuservermu.com.ve/index.php">TuServerMu</a></p>
         </div>
     </div>
 </div>
