@@ -32,7 +32,7 @@
                 </div>
                 <div class="form-group">
                     <label>Correo electronico</label>
-                    <input type="email" class="form-control" name="email" required value="a@a.com">
+                    <input type="email" class="form-control" name="email" required>
                 </div>
                 <button type="submit" class="btn btn-success">Registrarse</button>
             </form>
@@ -46,33 +46,6 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.js"></script>
-<script>
-    $("form").submit(function (e) {
-        e.preventDefault();
-        $.ajax({
-            url: "registrar.php",
-            method: "post",
-            data: $("form").serialize(),
-            success: function (data) {
-                var dato = JSON.parse(data);
-                if(!dato[0]){
-                    swal(
-                        '¡Ops!',
-                        dato[1],
-                        'error'
-                    );
-                }else if (dato[0]){
-                    swal(
-                        '¡Exito!',
-                        dato[1],
-                        'success'
-                    );
-                    location.reload();
-                }
-
-            }
-        });
-    });
-</script>
+<script src="js/registro_ajax.js"></script>
 </body>
 </html>
